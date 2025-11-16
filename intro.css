@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Estrella';
+  src: url('estrella-early.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Azo Sans';
+  src: url('azosans.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Azo Mono Bold';
+  src: url('azomono-bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Azo Mono Medium';
+  src: url('azomono-med.otf') format('opentype');
+}
+
+
+body {
+  background-color: #F9F8F2;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "menu content image"
+    "footer footer image";
+
+  grid-template-columns: 1fr 2fr 1.2fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 20px;
+
+  width: 90%;
+  max-width: 1200px;
+  min-height: 90vh;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+}
+
+.container > header.header {
+  grid-area: header;
+  background-image: url(header.jpg);
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  min-height: 10px;
+
+  text-align: center;
+  font-family: 'Estrella', sans-serif;
+  font-size: 38px;
+  color: #F9F8F2;
+  padding: 0.5rem 0;
+
+  border-style: solid;
+  border-color: #DCFC73;
+  border-width: 10px;
+}
+
+.container > nav.menu {
+  grid-area: menu;
+  text-align: center;
+  font-family: 'Azo Mono Bold', sans-serif;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #DCFC73;
+  color: #000000;
+  gap: 10px;
+}
+
+.menu a img {
+  width: 14px;
+  height: auto;
+  /*vertical-align: middle;*/
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.container > section.content {
+  grid-area: content;
+  background: linear-gradient(to right, #DCFC73, #F9F8F2);
+  font-family: 'Azo Sans', sans-serif;
+  font-size: 20px;
+  padding: 30px;
+  text-align: justify;
+  color: #000000;
+}
+
+.container > div.image {
+  grid-area: image;
+  background-color: #F9F8F2;
+  background: linear-gradient(to right, #F9F8F2, #E0D3F2);
+  font-family: 'Azo Sans', sans-serif;
+  font-size: 20px;
+  padding: 30px;
+  text-align: right;
+  color: #000000;
+}
+
+.main_image {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.main_image img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: auto;
+  border-color: #FFFFFF;
+  border-width: 1px;
+}
+
+.main_image figcaption {
+  margin-top: 10px;
+  font-family: 'Azo Mono Bold', sans-serif;
+  font-size: 11px;
+  font-style: italic;
+  color: #000000;
+  opacity: 0.70;
+}
+
+.container > footer.footer {
+  grid-area: footer;
+  text-align: justify;
+  background: linear-gradient(to right, #000000, #F9F8F2);
+  color: #F9F8F2;
+  font-family: 'Azo Mono Medium', sans-serif;
+  padding-right: 20px;
+  text-align: center;
+}
